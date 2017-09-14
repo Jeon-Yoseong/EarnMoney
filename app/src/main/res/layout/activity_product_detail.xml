@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.ssomai.android.scalablelayout.ScalableLayout
+                android:id="@+id/photo_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                sl:scale_base_height="240"
+                sl:scale_base_width="300">
+
+                <TextView
+                    android:id="@+id/detail_product_korean_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="한글 상품명"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    sl:scale_width="280"
+                    sl:scale_height="50"
+                    sl:scale_left="10"
+                    sl:scale_top="10"
+                    sl:scale_textsize="30"/>
+                <ImageView
+                    android:id="@+id/detail_product_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="150"
+                    sl:scale_height="150"
+                    sl:scale_left="75"
+                    sl:scale_top="75"
+                    app:srcCompat="@drawable/temp_img" />
+
+            </com.ssomai.android.scalablelayout.ScalableLayout>
+
+            <com.ssomai.android.scalablelayout.ScalableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                sl:scale_base_width="100"
+                sl:scale_base_height="90"
+                app:layout_constraintTop_toBottomOf="@+id/photo_name_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:id="@+id/detail_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상품명: abcdefg-1234"
+                    android:textColor="@color/black"
+                    sl:scale_width="80"
+                    sl:scale_height="7"
+                    sl:scale_left="10"
+                    sl:scale_top="3"
+                    sl:scale_textsize="5"/>
+
+                <TextView
+                    android:id="@+id/detail_product_china_unit_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="중국 단가: 40"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="10"
+                    sl:scale_top="13"
+                    sl:scale_textsize="5"/>
+
+                <TextView
+                    android:id="@+id/detail_china_unit_cost_korea_conversion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="환율적용 단가: 6800"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="50"
+                    sl:scale_top="13"
+                    sl:scale_textsize="5" />
+
+                <TextView
+                    android:id="@+id/detail_korean_unit_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="한국 원가: 15000"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="10"
+                    sl:scale_top="23"
+                    sl:scale_textsize="5" />
+
+                <TextView
+                    android:id="@+id/detail_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="정상 판매가: 40000"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="50"
+                    sl:scale_top="23"
+                    sl:scale_textsize="5" />
+
+                <TextView
+                    android:id="@+id/detail_lucky_today_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="럭투 판매가: 30000"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="10"
+                    sl:scale_top="33"
+                    sl:scale_textsize="5" />
+
+                <TextView
+                    android:id="@+id/detail_friend_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginTop="10dp"
+                    android:text="지인 판매가: 20000"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="50"
+                    sl:scale_top="33"
+                    sl:scale_textsize="5" />
+
+                <TextView
+                    android:id="@+id/detail_bomb_sale_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="땡처리 판매가: 12000"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="10"
+                    sl:scale_top="43"
+                    sl:scale_textsize="5" />
+
+                <TextView
+                    android:id="@+id/detail_surtax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="부가세: 4000"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="50"
+                    sl:scale_top="43"
+                    sl:scale_textsize="5" />
+
+                <TextView
+                    android:id="@+id/detail_profit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="이익금: 21000"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="10"
+                    sl:scale_top="53"
+                    sl:scale_textsize="5" />
+
+                <TextView
+                    android:id="@+id/detail_color"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="색상: 블랙"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="50"
+                    sl:scale_top="53"
+                    sl:scale_textsize="5" />
+
+                <TextView
+                    android:id="@+id/detail_size"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="사이즈: 프리"
+                    android:textColor="@color/black"
+                    sl:scale_width="40"
+                    sl:scale_height="7"
+                    sl:scale_left="10"
+                    sl:scale_top="63"
+                    sl:scale_textsize="5" />
+
+                <TextView
+                    android:id="@+id/detail_purchase_url"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="구입링크: www.leesoyeong.com"
+                    android:textColor="@color/black"
+                    sl:scale_width="80"
+                    sl:scale_height="7"
+                    sl:scale_left="10"
+                    sl:scale_top="73"
+                    sl:scale_textsize="5" />
+
+            </com.ssomai.android.scalablelayout.ScalableLayout>
+<!--
+            <TextView
+                android:id="@+id/detail_product_name1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="상품명: abcdefg-1234"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/photo_name_layout"
+                android:layout_marginLeft="42dp"
+                android:layout_marginStart="42dp" />
+
+            <TextView
+                android:id="@+id/detail_product_china_unit_cost"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="10dp"
+                android:text="중국 단가: 40"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_product_name1" />
+
+            <TextView
+                android:id="@+id/detail_china_unit_cost_korea_conversion"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="환율적용 단가: 6800"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@+id/detail_product_china_unit_cost"
+                app:layout_constraintTop_toBottomOf="@+id/detail_product_name" />
+
+            <TextView
+                android:id="@+id/detail_korean_unit_cost"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="10dp"
+                android:text="한국 원가: 15000"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_product_china_unit_cost" />
+
+            <TextView
+                android:id="@+id/detail_product_price"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="10dp"
+                android:text="정상 판매가: 40000"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_korean_unit_cost" />
+
+            <TextView
+                android:id="@+id/detail_lucky_today_price"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="럭투 판매가: 30000"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@+id/detail_product_price"
+                app:layout_constraintTop_toBottomOf="@+id/detail_korean_unit_cost" />
+
+            <TextView
+                android:id="@+id/detail_friend_price"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="10dp"
+                android:text="지인 판매가: 20000"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_product_price" />
+
+            <TextView
+                android:id="@+id/detail_bomb_sale_price"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="땡처리 판매가: 12000"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@+id/detail_friend_price"
+                app:layout_constraintTop_toBottomOf="@+id/detail_lucky_today_price" />
+
+            <TextView
+                android:id="@+id/detail_surtax"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="부가세: 4000"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/detail_friend_price"
+                android:layout_marginLeft="42dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="42dp" />
+
+            <TextView
+                android:id="@+id/detail_profit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="이익금: 21000"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/detail_bomb_sale_price"
+                app:layout_constraintLeft_toRightOf="@+id/detail_surtax" />
+
+            <TextView
+                android:id="@+id/detail_color"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="색상: 블랙"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/detail_surtax"
+                android:layout_marginLeft="42dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="42dp" />
+
+            <TextView
+                android:id="@+id/detail_size"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="사이즈: 프리"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/detail_profit"
+                app:layout_constraintLeft_toRightOf="@+id/detail_color" />
+
+            <TextView
+                android:id="@+id/detail_purchase_url"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="구입링크: www.leesoyeong.com"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/detail_color"
+                android:layout_marginLeft="42dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="42dp" />
+-->
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/product_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white">
+
+        <com.ssomai.android.scalablelayout.ScalableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            sl:scale_base_width="250"
+            sl:scale_base_height="105">
+
+            <ImageView
+                android:id="@+id/product_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/temp_img"
+                sl:scale_width="80"
+                sl:scale_height="80"
+                sl:scale_left="5"
+                sl:scale_top="13" />
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="하객 브이넥 랩원피스"
+                android:textColor="@color/black"
+                sl:scale_width="140"
+                sl:scale_height="20"
+                sl:scale_left="95"
+                sl:scale_top="5"
+                sl:scale_textsize="15" />
+
+            <TextView
+                android:id="@+id/product_selling_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정상 판매가\n40,000원"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                sl:scale_width="45"
+                sl:scale_height="20"
+                sl:scale_left="95"
+                sl:scale_top="30"
+                sl:scale_textsize="8" />
+
+            <TextView
+                android:id="@+id/product_unit_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한국 원가\n10,000원"
+                android:textColor="@color/black"
+                sl:scale_width="45"
+                sl:scale_height="20"
+                sl:scale_left="95"
+                sl:scale_top="55"
+                sl:scale_textsize="8" />
+
+            <TextView
+                android:id="@+id/product_profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이익금\n30,000원"
+                android:textColor="@color/black"
+                sl:scale_width="45"
+                sl:scale_height="20"
+                sl:scale_left="95"
+                sl:scale_top="80"
+                sl:scale_textsize="8" />
+
+            <TextView
+                android:id="@+id/product_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="색상: 블랙"
+                android:textColor="@color/black"
+                sl:scale_width="45"
+                sl:scale_height="20"
+                sl:scale_left="145"
+                sl:scale_top="30"
+                sl:scale_textsize="8" />
+
+            <TextView
+                android:id="@+id/product_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사이즈: Free"
+                android:textColor="@color/black"
+                sl:scale_width="45"
+                sl:scale_height="20"
+                sl:scale_left="145"
+                sl:scale_top="55"
+                sl:scale_textsize="8" />
+
+        </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/gray">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/return_management_item_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.ssomai.android.scalablelayout.ScalableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            sl:scale_base_height="100"
+            sl:scale_base_width="600"
+            android:id="@+id/scalableLayout5">
+
+            <TextView
+                android:id="@+id/return_management_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="하객 브이넥 랩원피스"
+                android:textColor="@color/black"
+                sl:scale_height="80"
+                sl:scale_left="10"
+                sl:scale_textsize="30"
+                sl:scale_top="10"
+                sl:scale_width="280" />
+
+            <TextView
+                android:id="@+id/return_management_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Black,"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                sl:scale_height="80"
+                sl:scale_left="300"
+                sl:scale_textsize="25"
+                sl:scale_top="10"
+                sl:scale_width="80" />
+
+            <TextView
+                android:id="@+id/return_management_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" Free"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                sl:scale_height="80"
+                sl:scale_left="380"
+                sl:scale_textsize="25"
+                sl:scale_top="10"
+                sl:scale_width="60" />
+
+            <ImageView
+                android:id="@+id/return_management_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/minus"
+                sl:scale_height="30"
+                sl:scale_left="450"
+                sl:scale_top="35"
+                sl:scale_width="30" />
+
+            <TextView
+                android:id="@+id/return_management_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                sl:scale_height="50"
+                sl:scale_left="490"
+                sl:scale_textsize="30"
+                sl:scale_top="25"
+                sl:scale_width="50" />
+
+            <ImageView
+                android:id="@+id/return_management_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/plus"
+                sl:scale_height="30"
+                sl:scale_left="550"
+                sl:scale_top="35"
+                sl:scale_width="30" />
+
+        </com.ssomai.android.scalablelayout.ScalableLayout>
+
+        <com.ssomai.android.scalablelayout.ScalableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/scalableLayout5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            sl:scale_base_width="600"
+            sl:scale_base_height="100">
+
+            <TextView
+                android:id="@+id/return_management_order_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="주문 날짜:"
+                android:textColor="@color/black"
+                sl:scale_height="40"
+                sl:scale_left="10"
+                sl:scale_textsize="25"
+                sl:scale_top="0"
+                sl:scale_width="120" />
+
+            <TextView
+                android:id="@+id/return_management_order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="2017/08/25"
+                android:textColor="@color/black"
+                sl:scale_height="40"
+                sl:scale_left="130"
+                sl:scale_textsize="25"
+                sl:scale_top="0"
+                sl:scale_width="165" />
+
+            <TextView
+                android:id="@+id/return_management_return_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="반품 날짜:"
+                android:textColor="@color/black"
+                sl:scale_height="40"
+                sl:scale_left="300"
+                sl:scale_textsize="25"
+                sl:scale_top="0"
+                sl:scale_width="120" />
+
+            <TextView
+                android:id="@+id/return_management_return_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="2017/08/27"
+                android:textColor="@color/black"
+                sl:scale_height="40"
+                sl:scale_left="420"
+                sl:scale_textsize="25"
+                sl:scale_top="0"
+                sl:scale_width="165" />
+
+            <Button
+                android:id="@+id/return_management_order_date_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주문날짜 선택"
+                android:textColor="@color/black"
+                sl:scale_height="60"
+                sl:scale_width="110"
+                sl:scale_left="10"
+                sl:scale_top="40"
+                sl:scale_textsize="15"/>
+<!--
+            <Button
+                android:id="@+id/return_management_return_date_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="반품날짜 선택"
+                android:textColor="@color/black"
+                sl:scale_height="60"
+                sl:scale_width="110"
+                sl:scale_left="300"
+                sl:scale_top="40"
+                sl:scale_textsize="15"/>
+-->
+        </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

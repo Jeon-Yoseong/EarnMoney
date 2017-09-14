@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.onespringday.earnmoney.Inquiry.OrderActivity"
+    tools:showIn="@layout/app_bar_order"
+    android:background="@color/white">
+
+
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        sl:scale_base_height="200"
+        sl:scale_base_width="900"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/scalableLayout3">
+
+        <Button
+            android:id="@+id/select_date_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="날짜 선택"
+            android:textColor="@color/black"
+            android:gravity="center"
+            sl:scale_width="199"
+            sl:scale_height="100"
+            sl:scale_left="10"
+            sl:scale_top="50"
+            sl:scale_textsize="25" />
+
+        <TextView
+            android:id="@+id/order_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            sl:scale_width="320"
+            sl:scale_height="180"
+            sl:scale_left="210"
+            sl:scale_top="10"
+            sl:scale_textsize="70" />
+
+        <TextView
+            android:id="@+id/order_date_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(화)"
+            android:textColor="@color/black"
+            android:gravity="center"
+            sl:scale_width="160"
+            sl:scale_height="180"
+            sl:scale_left="530"
+            sl:scale_top="10"
+            sl:scale_textsize="70" />
+
+        <TextView
+            android:id="@+id/order_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주문 리스트"
+            android:textColor="@color/black"
+            android:gravity="center"
+            sl:scale_width="200"
+            sl:scale_height="180"
+            sl:scale_left="690"
+            sl:scale_top="10"
+            sl:scale_textsize="60" />
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        sl:scale_base_width="360"
+        sl:scale_base_height="500"
+        app:layout_constraintTop_toBottomOf="@+id/scalableLayout3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_date_recyclerView"
+            sl:scale_width="360"
+            sl:scale_height="500"
+            sl:scale_left="0"
+            sl:scale_top="0" />
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+
+</android.support.constraint.ConstraintLayout>

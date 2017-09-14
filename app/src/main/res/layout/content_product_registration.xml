@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.onespringday.earnmoney.Registration.ProductRActivity"
+    tools:showIn="@layout/app_bar_product_registration"
+    android:background="@color/white">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <com.ssomai.android.scalablelayout.ScalableLayout
+                android:id="@+id/image_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                sl:scale_base_height="250"
+                sl:scale_base_width="380">
+
+                <ImageView
+                    android:id="@+id/product_photo_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/temp_img"
+                    sl:scale_width="200"
+                    sl:scale_height="200"
+                    sl:scale_left="90"
+                    sl:scale_top="0" />
+
+                <Button
+                    android:id="@+id/product_photo_select_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:text="상품사진 선택"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    sl:scale_width="200"
+                    sl:scale_height="50"
+                    sl:scale_left="90"
+                    sl:scale_top="200"
+                    sl:scale_textsize="20" />
+
+            </com.ssomai.android.scalablelayout.ScalableLayout>
+
+
+
+            <com.ssomai.android.scalablelayout.ScalableLayout
+                android:id="@+id/scalableLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_layout"
+                sl:scale_base_height="435"
+                sl:scale_base_width="390">
+
+                <!-- 양 끝 부분 흰색으로 -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="19"
+                    sl:scale_height="435"
+                    sl:scale_left="0"
+                    sl:scale_top="0"
+                    android:background="@color/white"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="19"
+                    sl:scale_height="435"
+                    sl:scale_left="371"
+                    sl:scale_top="0"
+                    android:background="@color/white"/>
+
+                <!-- 입력해야할 것들 선언-->
+                <TextView
+                    android:id="@+id/product_name_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="1"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="상품명"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_name_kor_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="32"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="한글\n상품명"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_china_unit_cost_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="63"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="중국 단가"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_china_unit_cost_korea_conversion_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="94"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="환율적용\n단가"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_korea_unit_cost_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="125"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="한국 원가"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_price_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="156"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="정상\n판매가"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_lucky_today_price_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="187"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="럭투\n판매가"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_friend_price_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="218"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="지인할인\n판매가"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_bomb_sale_price_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="249"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="땡처리\n판매가"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_surtax_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="280"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="부가세"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_profit_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="311"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="이익금"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_color_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="342"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="색상"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_size_registration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="373"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="사이즈"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/product_purchase_url_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="50"
+                    sl:scale_height="30"
+                    sl:scale_left="20"
+                    sl:scale_top="404"
+                    sl:scale_textsize="12"
+                    android:background="@color/white"
+                    android:text="구입링크"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <!-- 입력 부분-->
+
+                <EditText
+                    android:id="@+id/product_name_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="1"
+                    sl:scale_textsize="20"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white"
+                    android:privateImeOptions="defaultInputmode=english"/>
+
+                <EditText
+                    android:id="@+id/product_name_kor_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="32"
+                    sl:scale_textsize="20"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/product_china_unit_cost_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="선택 입력 사항"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="63"
+                    sl:scale_textsize="15"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/product_china_unit_cost_korea_conversion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="270"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="94"
+                    sl:scale_textsize="20"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp"
+                    android:gravity="left|center"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/product_china_unit_cost_korea_conversion_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="30"
+                    sl:scale_height="30"
+                    sl:scale_left="340"
+                    sl:scale_top="94"
+                    sl:scale_textsize="10"
+                    android:text="환율\n적용"
+                    android:background="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/product_korea_unit_cost_registration"
+                    app:layout_constraintTop_toBottomOf="@+id/product_china_unit_cost_registration" />
+
+                <EditText
+                    android:id="@+id/product_korea_unit_cost_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="125"
+                    sl:scale_textsize="20"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/product_price_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="156"
+                    sl:scale_textsize="20"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/product_lucky_today_price_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="187"
+                    sl:scale_textsize="15"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:hint="선택 입력 사항"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/product_friend_price_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="218"
+                    sl:scale_textsize="15"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:hint="선택 입력 사항"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/product_bomb_sale_price_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="249"
+                    sl:scale_textsize="15"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:hint="선택 입력 사항"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/product_surtax_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="270"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="280"
+                    sl:scale_textsize="20"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp"
+                    android:gravity="left|center"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/product_surtax_calculation_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="30"
+                    sl:scale_height="30"
+                    sl:scale_left="340"
+                    sl:scale_top="280"
+                    sl:scale_textsize="10"
+                    android:text="부가세\n계산"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/product_profit_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="270"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="311"
+                    sl:scale_textsize="20"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp"
+                    android:gravity="left|center"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/product_profit_calculation_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="30"
+                    sl:scale_height="30"
+                    sl:scale_left="340"
+                    sl:scale_top="311"
+                    sl:scale_textsize="10"
+                    android:text="이익금\n계산"
+                    android:background="@color/white" />
+
+                <EditText
+                    android:id="@+id/product_color_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="342"
+                    sl:scale_textsize="15"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="색상이 여러 개일 경우 ',' 로 구분해주세요."
+                    android:paddingLeft="5dp"
+                    android:background="@color/white"
+                    android:privateImeOptions="defaultInputmode=english"/>
+
+                <EditText
+                    android:id="@+id/product_size_registration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="373"
+                    sl:scale_textsize="15"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="사이즈가 여러 개일 경우 ',' 로 구분해주세요."
+                    android:paddingLeft="5dp"
+                    android:background="@color/white"
+                    android:privateImeOptions="defaultInputmode=english"/>
+
+                <EditText
+                    android:id="@+id/product_purchase_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    sl:scale_width="300"
+                    sl:scale_height="30"
+                    sl:scale_left="70"
+                    sl:scale_top="404"
+                    sl:scale_textsize="20"
+                    android:ems="10"
+                    android:inputType="textUri"
+                    android:paddingLeft="5dp"
+                    android:background="@color/white" />
+
+
+            </com.ssomai.android.scalablelayout.ScalableLayout>
+
+
+            <Button
+                android:id="@+id/product_registration_btn"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:text="등록하기"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scalableLayout"
+                android:layout_marginTop="20dp"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginBottom="30dp" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

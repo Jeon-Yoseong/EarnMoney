@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="등록" >
+        <menu>
+            <item
+                android:id="@+id/product_registration"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="상품등록" />
+        </menu>
+    </item>
+
+
+    <item android:title="조회">
+        <menu>
+            <item
+                android:id="@+id/order_inquiry"
+                android:icon="@drawable/temp_img"
+                android:title="주문수량조회" />
+            <item
+                android:id="@+id/product_inquiry"
+                android:icon="@drawable/circle_plus"
+                android:title="상품조회" />
+            <item
+                android:id="@+id/sales_inquiry"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="매출조회" />
+            <item
+                android:id="@+id/profit_inquiry"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="순이익조회" />
+            <item
+                android:id="@+id/return_inquiry"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="반품수량조회" />
+        </menu>
+    </item>
+
+    <item android:title="관리">
+        <menu>
+            <item
+                android:id="@+id/order_management"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="주문관리" />
+            <item
+                android:id="@+id/now_stock_management"
+                android:icon="@drawable/ic_menu_share"
+                android:title="현재재고관리" />
+            <item
+                android:id="@+id/order_stock_management"
+                android:icon="@drawable/ic_menu_send"
+                android:title="주문재고관리" />
+            <item
+                android:id="@+id/return_management"
+                android:icon="@drawable/ic_menu_send"
+                android:title="반품관리" />
+        </menu>
+    </item>
+    <item android:title="검색">
+        <menu>
+            <item
+                android:id="@+id/product_search"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="상품검색" />
+        </menu>
+    </item>
+
+</menu>

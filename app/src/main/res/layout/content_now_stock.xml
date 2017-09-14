@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.onespringday.earnmoney.Management.NowStockActivity"
+    tools:showIn="@layout/app_bar_now_stock"
+    android:background="@color/white">
+
+    <TabHost
+        android:id="@+id/now_stock_tab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:background="@color/gray"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/list_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.ssomai.android.scalablelayout.ScalableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        sl:scale_base_height="510"
+                        sl:scale_base_width="360">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/now_stock_recyclerView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            sl:scale_height="490"
+                            sl:scale_left="10"
+                            sl:scale_top="10"
+                            sl:scale_width="340" />
+
+                    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/update_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.ssomai.android.scalablelayout.ScalableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        sl:scale_base_height="510"
+                        sl:scale_base_width="360">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/now_stock_add_recyclerView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="재고 입력"
+                            android:textColor="@color/black"
+                            sl:scale_width="340"
+                            sl:scale_height="490"
+                            sl:scale_top="10"
+                            sl:scale_left="10" />
+
+
+                    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</android.support.constraint.ConstraintLayout>

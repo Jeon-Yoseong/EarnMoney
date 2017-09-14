@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.onespringday.earnmoney">
+
+    <!-- 사진 서버 저장 불러오기 관련 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 로그인 회원가입 액티비티-->
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 등록 액티비티 -->
+        <activity android:name=".Registration.ProductRActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 조회 액티비티 -->
+        <activity android:name=".Inquiry.OrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Inquiry.ProductActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Inquiry.ProfitActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Inquiry.ReturnActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Inquiry.SalesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Inquiry.ProductDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 관리 액티비티 -->
+        <activity android:name=".Management.OrderMActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Management.NowStockActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".Management.OrderStockActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".Management.ReturnMActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 설정 액티비티-->
+        <activity android:name=".ExchangeRateSettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- 검색 액티비티-->
+        <activity android:name=".Search.ProductSearchActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>
